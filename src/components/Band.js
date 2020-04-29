@@ -1,17 +1,5 @@
 import React from 'react';
 
-// const Band = ({bands}) =>{
-
-
-//   return bands.map(band => 
-//      <li>{band.bandName}
-//      <button
-//       onClick={() => band.delete(band.id)}>
-//         x
-//      </button>
-//   </li>)
-
-// }
 
 const Band = props => {
   return (
