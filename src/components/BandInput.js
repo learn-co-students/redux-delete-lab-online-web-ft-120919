@@ -4,20 +4,20 @@ import { connect } from 'react-redux'
 class BandInput extends Component {
 
   state = {
-    bandName: ''
+    name: ''
   }
 
   handleOnChange(event) {
     this.setState({
-      bandName: event.target.value,
+      name: event.target.value,
     });
   }
 
   handleOnSubmit(event) {
     event.preventDefault();
-    this.props.addBand(this.state.bandName);
+    this.props.addBand(this.state.name);
     this.setState({
-      bandName: '',
+      name: '',
     });
   }
 
@@ -27,7 +27,7 @@ class BandInput extends Component {
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <input
             type="text"
-            value={this.state.bandName}
+            value={this.state.name}
             onChange={(event) => this.handleOnChange(event)} />
           <input type="submit" />
         </form>
